@@ -11,3 +11,12 @@ sap-ui-cachebuster-info.json
 *.mtar
 # auto generated wildcard
 */.env
+
+# auto generated wildcard
+Stage/.env
+# auto generated wildcard
+Core/.env
+# auto generated wildcard
+VAL/.env
+# auto generated wildcard
+DM/.env
