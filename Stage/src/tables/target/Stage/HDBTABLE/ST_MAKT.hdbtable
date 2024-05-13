@@ -1,0 +1,12 @@
+column table "ST_MAKT" (
+   "HD"  BINARY(32)     comment 'All attributes except LD, SRC, MANDT, SPRAS, MATNR',
+   "LD"  TIMESTAMP     comment 'NOW()
+            ',
+   "SRC"  VARCHAR(100)     comment 'S4/HANA',
+   "MANDT"  VARCHAR(40)  NOT NULL   comment 'Client',
+   "MATNR"  VARCHAR(40)  NOT NULL   comment 'Material',
+   "SPRAS"  VARCHAR(2)  NOT NULL   comment 'Language Key',
+   "MAKTX"  VARCHAR(40)     comment 'Material description',
+   "MAKTG"  VARCHAR(40)     comment 'Material description'
+)
+comment 'Material Descriptions'

@@ -1,0 +1,15 @@
+column table "ST_T005T" (
+   "HD"  BINARY(32)     comment 'All attributes except LD, SRC, MANDT, SPRAS, LAND1',
+   "LD"  TIMESTAMP     comment 'NOW()
+            ',
+   "SRC"  VARCHAR(100)     comment 'S4/HANA',
+   "LAND1"  VARCHAR(3)  NOT NULL   comment 'Country Key',
+   "LANDX"  VARCHAR(15)  NOT NULL   comment 'Name',
+   "LANDX50"  VARCHAR(50)     comment 'Country Name',
+   "MANDT"  VARCHAR(3)  NOT NULL   comment 'Client',
+   "NATIO"  VARCHAR(15)  NOT NULL   comment 'Nationality',
+   "NATIO50"  VARCHAR(50)     comment 'Nationality (Long)',
+   "PRQ_SPREGT"  VARCHAR(30)     comment 'Name of super region',
+   "SPRAS"  VARCHAR(2)  NOT NULL   comment 'Language Key'
+)
+comment 'Country Names'

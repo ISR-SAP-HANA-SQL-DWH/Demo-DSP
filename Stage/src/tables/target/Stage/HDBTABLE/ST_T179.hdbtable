@@ -1,0 +1,11 @@
+column table "ST_T179" (
+   "HD"  BINARY(32)     comment 'All attributes except LD, SRC, MANDT, PRODH',
+   "LD"  TIMESTAMP     comment 'NOW()
+            ',
+   "SRC"  VARCHAR(100)     comment 'S4/HANA',
+   "MANDT"  VARCHAR(3)  NOT NULL   comment 'Client',
+   "PRODH"  VARCHAR(18)  NOT NULL   comment 'Product hierarchy',
+   "STUFE"  VARCHAR(1)     comment 'Level number',
+   "VTEXT"  VARCHAR(40)     comment 'Description'
+)
+comment 'Materials: Product Hierarchies'
