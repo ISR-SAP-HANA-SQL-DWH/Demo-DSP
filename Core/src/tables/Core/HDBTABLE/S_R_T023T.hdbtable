@@ -1,0 +1,17 @@
+column table "S_R_T023T" (
+   "HPRGR_HK"  BINARY(32)  NOT NULL,
+   "SPRGR_LD"  TIMESTAMP  NOT NULL,
+   "SPRGR_SRC"  VARCHAR(100),
+   "SPRGR_HD"  BINARY(32),
+   "MANDT"  VARCHAR(3)  NOT NULL   comment 'Client',
+   "SPRAS"  VARCHAR(2)  NOT NULL   comment 'Language Key',
+   "MATKL"  VARCHAR(9)  NOT NULL   comment 'Material Group',
+   "WGBEZ"  VARCHAR(20)  NOT NULL   comment 'Material Group Desc.',
+   "WGBEZ60"  VARCHAR(60)     comment 'Description 2 for the Material Group'
+, primary key  ( 
+     "HPRGR_HK",
+     "SPRGR_LD",
+     "MANDT",
+     "SPRAS")
+)
+comment 'Material Group Descriptions'

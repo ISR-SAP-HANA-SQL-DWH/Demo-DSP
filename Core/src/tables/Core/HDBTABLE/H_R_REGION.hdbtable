@@ -1,0 +1,9 @@
+column table "H_R_REGION" (
+   "HREGN_HK"  BINARY(32)  NOT NULL,
+   "HREGN_LD"  TIMESTAMP,
+   "HREGN_SRC"  VARCHAR(100),
+   "LAND1"  VARCHAR(3)  NOT NULL   comment 'Country Key',
+   "REGIO"  VARCHAR(3)  NOT NULL   comment 'Region'
+, primary key  ( 
+     "HREGN_HK")
+)

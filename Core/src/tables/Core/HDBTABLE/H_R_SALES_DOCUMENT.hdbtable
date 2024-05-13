@@ -1,0 +1,8 @@
+column table "H_R_SALES_DOCUMENT" (
+   "HCUSO_HK"  BINARY(32)  NOT NULL,
+   "HCUSO_LD"  TIMESTAMP,
+   "HCUSO_SRC"  VARCHAR(100),
+   "VBELN"  VARCHAR(10)
+, primary key  ( 
+     "HCUSO_HK")
+)

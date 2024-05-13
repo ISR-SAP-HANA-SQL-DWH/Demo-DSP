@@ -1,0 +1,20 @@
+column table "S_R_T005T" (
+   "HCNTR_HK"  BINARY(32)  NOT NULL,
+   "SCNTR_LD"  TIMESTAMP  NOT NULL,
+   "SCNTR_SRC"  VARCHAR(100),
+   "SCNTR_HD"  BINARY(32),
+   "MANDT"  VARCHAR(3)  NOT NULL   comment 'Client',
+   "SPRAS"  VARCHAR(2)  NOT NULL   comment 'Language Key',
+   "LAND1"  VARCHAR(3)  NOT NULL   comment 'Country Key',
+   "LANDX"  VARCHAR(15)  NOT NULL   comment 'Name',
+   "LANDX50"  VARCHAR(50)     comment 'Country Name',
+   "NATIO"  VARCHAR(15)  NOT NULL   comment 'Nationality',
+   "NATIO50"  VARCHAR(50)     comment 'Nationality (Long)',
+   "PRQ_SPREGT"  VARCHAR(30)     comment 'Name of super region'
+, primary key  ( 
+     "HCNTR_HK",
+     "SCNTR_LD",
+     "MANDT",
+     "SPRAS")
+)
+comment 'Country Names'

@@ -1,0 +1,10 @@
+column table "L_R_SALES_DOCUMENT_HEAD" (
+   "LSDHE_HK"  BINARY(32)  NOT NULL,
+   "HCUSO_HK"  BINARY(32),
+   "HPLAN_HK"  BINARY(32),
+   "HCUST_HK"  BINARY(32),
+   "LSDHE_LD"  TIMESTAMP,
+   "LSDHE_SRC"  VARCHAR(100)
+, primary key  ( 
+     "LSDHE_HK")
+)

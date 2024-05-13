@@ -1,0 +1,8 @@
+column table "H_R_PLANT" (
+   "HPLAN_HK"  BINARY(32)  NOT NULL,
+   "HPLAN_LD"  TIMESTAMP,
+   "HPLAN_SRC"  VARCHAR(100),
+   "WERKS"  VARCHAR(4)  NOT NULL   comment 'Plant'
+, primary key  ( 
+     "HPLAN_HK")
+)

@@ -1,0 +1,8 @@
+column table "H_R_CUSTOMER" (
+   "HCUST_HK"  BINARY(32)  NOT NULL,
+   "HCUST_LD"  TIMESTAMP,
+   "HCUST_SRC"  VARCHAR(100),
+   "KUNNR"  VARCHAR(10)     comment 'Customer'
+, primary key  ( 
+     "HCUST_HK")
+)

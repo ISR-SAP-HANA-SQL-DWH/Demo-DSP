@@ -1,0 +1,8 @@
+column table "H_R_PRODUCT_GROUP" (
+   "HPRGR_HK"  BINARY(32)  NOT NULL,
+   "HPRGR_LD"  TIMESTAMP,
+   "HPRGR_SRC"  VARCHAR(100),
+   "MATKL"  VARCHAR(9)  NOT NULL   comment 'Material Group'
+, primary key  ( 
+     "HPRGR_HK")
+)
