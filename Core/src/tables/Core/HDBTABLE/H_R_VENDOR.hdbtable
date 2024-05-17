@@ -1,8 +1,0 @@
-column table "H_R_VENDOR" (
-   "HVNDR_HK"  BINARY(32)  NOT NULL,
-   "HVNDR_LD"  TIMESTAMP,
-   "HVNDR_SRC"  VARCHAR(100),
-   "LIFNR"  VARCHAR(10)  NOT NULL   comment 'Vendor'
-, primary key  ( 
-     "HVNDR_HK")
-)

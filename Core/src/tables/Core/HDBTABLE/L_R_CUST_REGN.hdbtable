@@ -1,9 +1,0 @@
-column table "L_R_CUST_REGN" (
-   "LCSRN_HK"  BINARY(32)  NOT NULL,
-   "HCUST_HK"  BINARY(32),
-   "HREGN_HK"  BINARY(32),
-   "LCSRN_LD"  TIMESTAMP,
-   "LCSRN_SRC"  VARCHAR(100)
-, primary key  ( 
-     "LCSRN_HK")
-)

@@ -1,9 +1,0 @@
-column table "L_R_PLAN_REGN" (
-   "LPLRE_HK"  BINARY(32)  NOT NULL,
-   "HPLAN_HK"  BINARY(32),
-   "HREGN_HK"  BINARY(32),
-   "LPLRE_LD"  TIMESTAMP,
-   "LPLRE_SRC"  VARCHAR(100)
-, primary key  ( 
-     "LPLRE_HK")
-)

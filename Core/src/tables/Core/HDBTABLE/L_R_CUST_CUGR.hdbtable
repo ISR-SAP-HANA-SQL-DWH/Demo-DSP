@@ -1,9 +1,0 @@
-column table "L_R_CUST_CUGR" (
-   "LCTCG_HK"  BINARY(32)  NOT NULL,
-   "HCUST_HK"  BINARY(32),
-   "HCUGR_HK"  BINARY(32),
-   "LCTCG_LD"  TIMESTAMP,
-   "LCTCG_SRC"  VARCHAR(100)
-, primary key  ( 
-     "LCTCG_HK")
-)

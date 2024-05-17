@@ -1,9 +1,0 @@
-column table "L_R_PROD_PRGR" (
-   "LPRPG_HK"  BINARY(32)  NOT NULL,
-   "HPRGR_HK"  BINARY(32),
-   "HPROD_HK"  BINARY(32),
-   "LPRPG_LD"  TIMESTAMP,
-   "LPRPG_SRC"  VARCHAR(100)
-, primary key  ( 
-     "LPRPG_HK")
-)

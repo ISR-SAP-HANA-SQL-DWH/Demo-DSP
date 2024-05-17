@@ -1,9 +1,0 @@
-column table "L_R_CUST_IDST" (
-   "LCUID_HK"  BINARY(32)  NOT NULL,
-   "HIDST_HK"  BINARY(32),
-   "HCUST_HK"  BINARY(32),
-   "LCUID_LD"  TIMESTAMP,
-   "LCUID_SRC"  VARCHAR(100)
-, primary key  ( 
-     "LCUID_HK")
-)

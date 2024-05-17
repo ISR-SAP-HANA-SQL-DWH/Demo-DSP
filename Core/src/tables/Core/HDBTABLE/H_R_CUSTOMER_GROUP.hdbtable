@@ -1,8 +1,0 @@
-column table "H_R_CUSTOMER_GROUP" (
-   "HCUGR_HK"  BINARY(32)  NOT NULL,
-   "HCUGR_LD"  TIMESTAMP,
-   "HCUGR_SRC"  VARCHAR(100),
-   "KUKLA"  VARCHAR(2)  NOT NULL   comment 'Customer classific.'
-, primary key  ( 
-     "HCUGR_HK")
-)

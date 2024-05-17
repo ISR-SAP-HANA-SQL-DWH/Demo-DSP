@@ -1,8 +1,0 @@
-column table "H_R_INDUSTRY" (
-   "HIDST_HK"  BINARY(32)  NOT NULL,
-   "HIDST_LD"  TIMESTAMP,
-   "HIDST_SRC"  VARCHAR(100),
-   "BRSCH"  VARCHAR(4)  NOT NULL   comment 'Industry'
-, primary key  ( 
-     "HIDST_HK")
-)

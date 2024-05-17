@@ -1,8 +1,0 @@
-column table "H_R_PRODUCT" (
-   "HPROD_HK"  BINARY(32)  NOT NULL,
-   "HPROD_LD"  TIMESTAMP,
-   "HPROD_SRC"  VARCHAR(100),
-   "MATNR"  VARCHAR(40)  NOT NULL   comment 'Material'
-, primary key  ( 
-     "HPROD_HK")
-)

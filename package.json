@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@sap/hdi-deploy": "^5.1.1"
+  }
+}

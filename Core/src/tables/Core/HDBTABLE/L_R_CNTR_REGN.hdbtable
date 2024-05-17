@@ -1,9 +1,0 @@
-column table "L_R_CNTR_REGN" (
-   "LCTRE_HK"  BINARY(32)  NOT NULL,
-   "HCNTR_HK"  BINARY(32),
-   "HREGN_HK"  BINARY(32),
-   "LCTRE_LD"  TIMESTAMP,
-   "LCTRE_SRC"  VARCHAR(100)
-, primary key  ( 
-     "LCTRE_HK")
-)

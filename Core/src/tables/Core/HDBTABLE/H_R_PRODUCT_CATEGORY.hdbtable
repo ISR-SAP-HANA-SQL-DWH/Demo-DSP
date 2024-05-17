@@ -1,8 +1,0 @@
-column table "H_R_PRODUCT_CATEGORY" (
-   "HPRCT_HK"  BINARY(32)  NOT NULL,
-   "HPRCT_LD"  TIMESTAMP,
-   "HPRCT_SRC"  VARCHAR(100),
-   "PRODH"  VARCHAR(18)  NOT NULL   comment 'Product hierarchy'
-, primary key  ( 
-     "HPRCT_HK")
-)

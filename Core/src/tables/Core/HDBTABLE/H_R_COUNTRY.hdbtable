@@ -1,8 +1,0 @@
-column table "H_R_COUNTRY" (
-   "HCNTR_HK"  BINARY(32)  NOT NULL,
-   "HCNTR_LD"  TIMESTAMP,
-   "HCNTR_SRC"  VARCHAR(100),
-   "LAND1"  VARCHAR(3)  NOT NULL   comment 'Country Key'
-, primary key  ( 
-     "HCNTR_HK")
-)
