@@ -201,7 +201,7 @@ column table "ST_KNA1" (
    "J_1ILSTNO"  VARCHAR(40)     comment 'LST number',
    "J_1IPANNO"  VARCHAR(40)     comment 'Permanent account number',
    "J_1IEXCICU"  VARCHAR(1)     comment 'Exc.Tax Ind. Custom.',
-   "AEDAT"  DATE     comment '(Obsolete) Last Changed On – do not use',
+   "AEDAT"  DATE     comment '(Obsolete) Last Changed On â€“ do not use',
    "USNAM"  VARCHAR(12)     comment '(Obsolete) Changed by the user',
    "J_1ISERN"  VARCHAR(40)     comment 'Service Tax Registration Number',
    "J_1IPANREF"  VARCHAR(40)     comment 'PAN Reference Number',

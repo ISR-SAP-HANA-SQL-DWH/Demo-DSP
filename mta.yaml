@@ -1,111 +1,110 @@
+_schema-version: "2.1"
 ID: Demo_DWH
-_schema-version: '2.1'
 version: 0.0.1
 modules:
-  - name: Stage
-    type: hdb
-    path: Stage
-    parameters:
-      buildpack: nodejs_buildpack
-    requires:
-      - name: hdi_Stage
-        properties:
-          TARGET_CONTAINER: '~{hdi-stage-name}'
-  - name: Core
-    type: hdb
-    path: Core
-    parameters:
-      buildpack: nodejs_buildpack
-    requires:
-      - name: hdi_Core
-        properties:
-          TARGET_CONTAINER: '~{hdi-core-name}'
-      - name: ccs_dw_stage
-        group: SERVICE_REPLACEMENTS
-        properties:
-          key: dw_stage-service
-          service: ~{dw-stage-ccs}
-  - name: VAL
-    type: hdb
-    path: VAL
-    parameters:
-      buildpack: nodejs_buildpack
-    requires:
-      - name: hdi_VAL
-        properties:
-          TARGET_CONTAINER: '~{hdi-val-name}'
-      - name: ccs_dw_core
-        group: SERVICE_REPLACEMENTS
-        properties:
-          key: dw_core-service
-          service: '~{dw-core-ccs}'
-  - name: DM
-    type: hdb
-    path: DM
-    parameters:
-      buildpack: nodejs_buildpack
-    requires:
-     - name: hdi_DM
-       properties:
-         TARGET_CONTAINER: '~{hdi-dm-name}'     
-     - name: css_dw_val
-       group: SERVICE_REPLACEMENTS
-       properties:
-          key: dw_val-service
-          service: '~{dw-val-ccs}' 
-
-resources:
+- name: Stage
+  type: hdb
+  path: Stage
+  requires:
   - name: hdi_Stage
     properties:
-      hdi-stage-name: '${service-name}'
-    type: com.sap.xs.hdi-container
-    parameters:
-      config:
-        database_id: 67456125-096c-44f8-9198-fc881cd932c7
-        schema: DW_STAGE
-      service-name: hdi_Stage
+      TARGET_CONTAINER: ~{hdi-stage-name}
+  parameters:
+    buildpack: nodejs_buildpack
+- name: Core
+  type: hdb
+  path: Core
+  requires:
   - name: hdi_Core
     properties:
-       hdi-core-name: ${service-name}
-    type: com.sap.xs.hdi-container
-    parameters:
-      config:
-        database_id: 67456125-096c-44f8-9198-fc881cd932c7
-        schema: DW_CORE
-      service-name: hdi_Core
+      TARGET_CONTAINER: ~{hdi-core-name}
+  - name: ccs_dw_stage
+    group: SERVICE_REPLACEMENTS
+    properties:
+      key: dw_stage-service
+      service: ~{dw-stage-ccs}
+  parameters:
+    buildpack: nodejs_buildpack
+- name: VAL
+  type: hdb
+  path: VAL
+  requires:
   - name: hdi_VAL
     properties:
-       hdi-val-name: ${service-name}
-    type: com.sap.xs.hdi-container
-    parameters:
-      config:
-        database_id: 67456125-096c-44f8-9198-fc881cd932c7
-        schema: DW_VAL
-      service-name: hdi_VAL
+      TARGET_CONTAINER: ~{hdi-val-name}
+  - name: ccs_dw_core
+    group: SERVICE_REPLACEMENTS
+    properties:
+      key: dw_core-service
+      service: ~{dw-core-ccs}
+  parameters:
+    buildpack: nodejs_buildpack
+- name: DM
+  type: hdb
+  path: DM
+  requires:
   - name: hdi_DM
     properties:
-       hdi-dm-name: ${service-name}
-    type: com.sap.xs.hdi-container
-    parameters:
-      config:
-        database_id: 67456125-096c-44f8-9198-fc881cd932c7
-        schema: DW_DM
-      service-name: hdi_DM
-  - name: ccs_dw_stage
-    parameters:
-       service-name: hdi_Stage
-    properties:
-       dw-stage-ccs: ${service-name}
-    type: org.cloudfoundry.existing-service
-  - name: ccs_dw_core
-    type: org.cloudfoundry.existing-service
-    properties:
-      dw-core-ccs: '${service-name}'
-    parameters:
-      service-name: hdi_Core
+      TARGET_CONTAINER: ~{hdi-dm-name}
   - name: css_dw_val
-    type: org.cloudfoundry.existing-service
-    parameters:
-      service-name: hdi_VAL
+    group: SERVICE_REPLACEMENTS
     properties:
-      dw-val-ccs: '${service-name}'
+      key: dw_val-service
+      service: ~{dw-val-ccs}
+  parameters:
+    buildpack: nodejs_buildpack
+resources:
+- name: hdi_Stage
+  type: com.sap.xs.hdi-container
+  parameters:
+    config:
+      database_id: 67456125-096c-44f8-9198-fc881cd932c7
+      schema: DW_STAGE
+    service-name: hdi_Stage
+  properties:
+    hdi-stage-name: ${service-name}
+- name: hdi_Core
+  type: com.sap.xs.hdi-container
+  parameters:
+    config:
+      database_id: 67456125-096c-44f8-9198-fc881cd932c7
+      schema: DW_CORE
+    service-name: hdi_Core
+  properties:
+    hdi-core-name: ${service-name}
+- name: hdi_VAL
+  type: com.sap.xs.hdi-container
+  parameters:
+    config:
+      database_id: 67456125-096c-44f8-9198-fc881cd932c7
+      schema: DW_VAL
+    service-name: hdi_VAL
+  properties:
+    hdi-val-name: ${service-name}
+- name: hdi_DM
+  type: com.sap.xs.hdi-container
+  parameters:
+    config:
+      database_id: 67456125-096c-44f8-9198-fc881cd932c7
+      schema: DW_DM
+    service-name: hdi_DM
+  properties:
+    hdi-dm-name: ${service-name}
+- name: ccs_dw_stage
+  type: org.cloudfoundry.existing-service
+  parameters:
+    service-name: hdi_Stage
+  properties:
+    dw-stage-ccs: ${service-name}
+- name: ccs_dw_core
+  type: org.cloudfoundry.existing-service
+  parameters:
+    service-name: hdi_Core
+  properties:
+    dw-core-ccs: ${service-name}
+- name: css_dw_val
+  type: org.cloudfoundry.existing-service
+  parameters:
+    service-name: hdi_VAL
+  properties:
+    dw-val-ccs: ${service-name}

@@ -165,7 +165,7 @@ column table "ST_LFA1" (
    "J_1ISSIST"  VARCHAR(1)     comment 'SSI status',
    "J_1IVTYP"  VARCHAR(2)     comment 'Type of Vendor',
    "J_1IVENCRE"  VARCHAR(1)     comment 'CENVAT Scheme Participant',
-   "AEDAT"  DATE     comment '(Obsolete) Last Changed On – do not use',
+   "AEDAT"  DATE     comment '(Obsolete) Last Changed On â€“ do not use',
    "USNAM"  VARCHAR(12)     comment '(Obsolete) Changed by the user',
    "J_1ISERN"  VARCHAR(40)     comment 'Service Tax Registration Number',
    "J_1IPANREF"  VARCHAR(40)     comment 'PAN Reference Number',

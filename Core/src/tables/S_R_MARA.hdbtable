@@ -204,7 +204,7 @@ column table "S_R_MARA" (
    "MO_PROFILE_ID"  VARCHAR(20)     comment 'Product Orientation Profile',
    "OVERHANG_TRESH"  DECIMAL(5,2)     comment 'Overhang Threshold [%]',
    "BRIDGE_TRESH"  DECIMAL(5,2)     comment 'Bridge Threshold [%]',
-   "BRIDGE_MAX_SLOPE"  DECIMAL(5,2)     comment 'Maximum Slope for Bridges [°]',
+   "BRIDGE_MAX_SLOPE"  DECIMAL(5,2)     comment 'Maximum Slope for Bridges [Â°]',
    "HEIGHT_NONFLAT"  DECIMAL(13,3)     comment 'Absolute Height Threshold',
    "HEIGHT_NONFLAT_UOM"  VARCHAR(3)     comment 'UoM of Absolute Height Threshold',
    "SCM_KITCOMP"  VARCHAR(1)     comment 'Product for Kit-to-Order',

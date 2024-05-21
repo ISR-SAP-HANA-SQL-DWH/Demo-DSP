@@ -233,7 +233,7 @@ column table "ST_VBAP" (
    "TC_AUT_DET"  VARCHAR(2)     comment 'Tax Code Automatically Determined',
    "MANUAL_TC_REASON"  VARCHAR(2)     comment 'Manual Tax Code Reason',
    "FISCAL_INCENTIVE"  VARCHAR(4)     comment 'Tax Incentive Type',
-   "TAX_SUBJECT_ST"  VARCHAR(1)     comment 'Tax Subject to SubstituiÁ„o Tribut·ria',
+   "TAX_SUBJECT_ST"  VARCHAR(1)     comment 'Tax Subject to Substitui√ß√£o Tribut√°ria',
    "FISCAL_INCENTIVE_ID"  VARCHAR(4)     comment 'Incentive ID',
    "SPCSTO"  VARCHAR(2)     comment 'NF CFOP Special Case',
    "REVACC_REFID"  VARCHAR(30)     comment 'Rev.Acc. Reference ID',
