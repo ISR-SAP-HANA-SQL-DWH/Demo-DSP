@@ -1,4 +1,4 @@
-TYPE "ST_KNA1" AS TABLE ( 
+TYPE "tt_ST_KNA1" AS TABLE ( 
     "HD"  BINARY(32)     comment 'All attributes except LD, SRC, MANDT, KUNNR',
    "LD"  TIMESTAMP     comment 'NOW()',
    "SRC"  VARCHAR(100)     comment 'S4/HANA',
