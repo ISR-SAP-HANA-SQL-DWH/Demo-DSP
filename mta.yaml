@@ -108,3 +108,5 @@ resources:
     service-name: hdi_VAL
   properties:
     dw-val-ccs: ${service-name}
+- name: cross-container-service-1
+  type: deleteme
