@@ -1,0 +1,26 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "build.mta",
+			"label": "Build ",
+			"taskType": "Build",
+			"projectPath": "/home/user/projects/Demo-DSP",
+			"extensions": []
+		},
+		{
+			"type": "deploy.mta.cf",
+			"label": "Deploy to Cloud Foundry ",
+			"taskType": "Deploy",
+			"mtarPath": "/home/user/projects/Demo-DSP/mta_archives/Demo-DSP_0.0.1.mtar",
+			"extensions": [],
+			"dependsOn": [
+				"Build "
+			],
+			"cfTarget": "",
+			"cfEndpoint": "",
+			"cfOrg": "",
+			"cfSpace": ""
+		}
+	]
+}

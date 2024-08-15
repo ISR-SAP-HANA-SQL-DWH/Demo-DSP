@@ -45,8 +45,8 @@ pipeline {
             }        
             steps {
 	                echo 'Deploying....'
-	                sh('cf api $XSA_API_ENDPOINT --cacert /data/SAP/xs_client/xsa_api.cer')
-	                sh('cf login -u $HANA_XSA_CREDS_USR -p $HANA_XSA_CREDS_PSW -o $ORGANIZATION -s $CI_SPACE')
+	                sh('cf api $API_ENDPOINT --cacert /data/SAP/xs_client/xsa_api.cer')
+	                sh('cf login -u $HANA_TECHNICAL_USER -p $HANA_TECHNICAL_PASSWORD -o $ORGANIZATION -s $CI_SPACE')
 	                sh('cf deploy -f ${WORKSPACE}/mta_archives/${mtaName}.mtar')
                 }
         }
