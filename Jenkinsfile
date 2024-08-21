@@ -1,8 +1,11 @@
 pipeline {
     agent any
 
+    triggers {
+        cron('H(0) 0 1 * *')
+    }
+
     environment {
-        HANA_XSA_CREDS      = credentials('XSA_JENKINS')
         API_ENDPOINT        = 'https://api.cf.eu10.hana.ondemand.com'
         ORGANIZATION        = 'ISR Information Products AG_sap-im'
         CI_SPACE            = 'DEV'
@@ -10,8 +13,8 @@ pipeline {
         mtaName             = sh(script: '''awk -F: '$1 ~ /^ID/ { gsub(/\\s/,"", $2); print $2 }' ${WORKSPACE}/mta.yaml''', returnStdout: true).trim()
 
         HANA_TECHN_CREDS    = credentials('TU_CICD')
-        HANA_TECHNICAL_USER       = "$HANA_TECHN_CREDS_USR"
-        HANA_TECHNICAL_PASSWORD   = "$HANA_TECHN_CREDS_PSW"      
+        HANA_TECHNICAL_USER       = "${HANA_TECHN_CREDS_USR}"
+        HANA_TECHNICAL_PASSWORD   = "${HANA_TECHN_CREDS_PSW}"      
 
         JENKINSUSER_CREDS   = credentials('ff9118fa-4ef6-4fb2-a357-9b40114b6683')
     }
@@ -51,4 +54,17 @@ pipeline {
                 }
         }
     }
+
+    post {
+        always {
+            echo "Pipeline completed. Status: ${currentBuild.result}"
+        }
+        success {
+            echo "Pipeline succeeded!"
+        }
+        failure {
+            echo "Pipeline failed: ${currentBuild.result}"
+            echo "Error: ${currentBuild.description}"
+        }
+    }   
 }
