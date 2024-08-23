@@ -1,9 +1,9 @@
 pipeline {
     agent any
 
-    triggers {
-        cron('H(0) 0 1 * *')
-    }
+    // triggers {
+    //     cron('H(0) 0 1 * *')
+    // }
 
     environment {
         API_ENDPOINT        = 'https://api.cf.eu10.hana.ondemand.com'
