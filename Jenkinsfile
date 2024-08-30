@@ -14,7 +14,7 @@ pipeline {
 
         HANA_TECHN_CREDS    = credentials('sap-im-database-user-tu_cicd')
         HANA_TECHNICAL_USER       = "$HANA_TECHN_CREDS_USR"
-        HANA_TECHNICAL_PASSWORD   = "$HANA_TECHN_CREDS_PSW"      
+        HANA_TECHNICAL_PASSWORD   = "$HANA_TECHN_CREDS_PSW"
         
     }
     stages {
@@ -23,6 +23,15 @@ pipeline {
                 expression {env.BRANCH_NAME == 'release'}
             }
             steps {
+                // echo 'Installing nodejs..'
+                //     sh('''curl -fsSL https://deb.nodesource.com/setup_22.x -o nodesource_setup.sh''')
+                //     sh('''sudo -E bash nodesource_setup.sh''')
+                //     sh('''sudo apt-get install -y nodejs''')
+                //     script {
+                //         // Print the output to the console
+                //         def nodeVersion = sh(script: 'node -v', returnStdout: true).trim()
+                //         echo 'Node version: ${nodeVersion} installed.'
+                //     }
                 echo 'Building..'
                 // create local npmrc file
                     sh('''cat <<EOF > .npmrc
