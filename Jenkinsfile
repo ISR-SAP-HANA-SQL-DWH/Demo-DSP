@@ -13,8 +13,8 @@ pipeline {
         mtaName             = sh(script: '''awk -F: '$1 ~ /^ID/ { gsub(/\\s/,"", $2); print $2 }' ${WORKSPACE}/mta.yaml''', returnStdout: true).trim()
 
         HANA_TECHN_CREDS    = credentials('sap-im-database-user-tu_cicd')
-        HANA_TECHNICAL_USER       = "${HANA_TECHN_CREDS_USR}"
-        HANA_TECHNICAL_PASSWORD   = "${HANA_TECHN_CREDS_PSW}"      
+        HANA_TECHNICAL_USER       = "$HANA_TECHN_CREDS_USR"
+        HANA_TECHNICAL_PASSWORD   = "$HANA_TECHN_CREDS_PSW"      
         
     }
     stages {
