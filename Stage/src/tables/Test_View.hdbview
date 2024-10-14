@@ -1,0 +1,1 @@
+VIEW "Test_View" AS SELECT * FROM "SY_V_KNA1"

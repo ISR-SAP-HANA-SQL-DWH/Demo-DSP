@@ -1,5 +1,5 @@
 {
     "SAP HANA Database Explorer.displaySapWebAnalyticsStartupNotification": false,
     "SAP HANA Project Explorer.bind.confirm automatic undeployment": false,
-    "SAP HANA Database Artifacts.lastSelectedTargetPath": "/home/user/projects/Demo-DSP/Stage/src/etl"
+    "SAP HANA Database Artifacts.lastSelectedTargetPath": "/home/user/projects/Demo-DSP/Stage/src/tables/source"
 }

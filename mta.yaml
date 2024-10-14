@@ -9,6 +9,11 @@ modules:
   - name: hdi_Stage
     properties:
       TARGET_CONTAINER: ~{hdi-stage-name}
+  - name: cross-container-service-1
+    group: SERVICE_REPLACEMENTS
+    properties:
+      key: ServiceName_1
+      service: ~{the-service-name}
   parameters:
     buildpack: nodejs_buildpack
 - name: Core
@@ -109,4 +114,8 @@ resources:
   properties:
     dw-val-ccs: ${service-name}
 - name: cross-container-service-1
-  type: deleteme
+  type: org.cloudfoundry.existing-service
+  parameters:
+    service-name: UPS_DSP_ISR_DEMO_HANA_SQL
+  properties:
+    the-service-name: ${service-name}

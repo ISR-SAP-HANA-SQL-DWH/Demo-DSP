@@ -1,0 +1,8 @@
+{
+  "SY_V_KNA1": {
+    "target": {
+      "object": "V_KNA1",
+      "schema": "ISR_DEMO_HANA_SQL"
+    }
+  }
+}
